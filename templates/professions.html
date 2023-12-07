@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Professions</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <h1>Top Professions</h1>
+    <p>Based on your traits, here are the top professions:</p>
+
+    <div>
+        <!-- Display the generated professions as a list -->
+        <ul>
+            {% for profession in generated_professions %}
+                <li>{{ profession }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
