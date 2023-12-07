@@ -1,1 +1,26 @@
-venv:python3 -m venv myenvsource myenv/bin/activateinstall:pip install --upgrade pip &&\pip install -r requirements.txttest:python -m pytest -vv test_*.pyformat:black *.py lint:ruff check *.py container-lint:docker run --rm -i hadolint/hadolint < Dockerfilerefactor: format lintdeploy:az webapp up --sku F1 --name TellMeMyProfession --location eastusall: install lint test format deploy
+venv:
+  python3 -m venv myenv
+    source myenv/bin/activate
+
+install:
+  pip install --upgrade pip &&\
+    pip install -r requirements.txt
+
+test:
+  python -m pytest -vv test_*.py
+
+format:
+  black *.py 
+
+lint:
+  ruff check *.py 
+
+container-lint:
+  docker run --rm -i hadolint/hadolint < Dockerfilere
+
+factor: format lint
+
+deploy:
+  az webapp up --sku F1 --name TellMeMyProfession --location eastus
+
+all: install lint test format deploy
