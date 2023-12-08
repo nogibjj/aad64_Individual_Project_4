@@ -1,6 +1,8 @@
 # aad64_Individual_Project_4
 Auto Scaling Flask App Using Any Platform As a Service
 
+[![CI/CD Pipeline](https://github.com/nogibjj/aad64_Individual_Project_4/actions/workflows/actions.yml/badge.svg)](https://github.com/nogibjj/aad64_Individual_Project_4/actions/workflows/actions.yml)
+
 # Summary:
 This project was created to learn the ins and outs of creating a Flask app and using Dockerhub and Azure App Services to deploy said app. For the same, we built a publicly accessible auto-scaling container using Azure App Services and Flask. This was an easy way to build and deploy a scaleable web-hosted app.
 
@@ -27,10 +29,22 @@ This project was created to learn the ins and outs of creating a Flask app and u
 ```
 
 # The App:
-The flask app is a simple text generation application that is aimed at giving a user top three professions they would be good at based on a user prompt of one's skills and/or traits. It makes use of the huggingface 'text-generation' model for the same. 
+The [flask app](https://github.com/nogibjj/aad64_Individual_Project_4/blob/main/flask_app.py) is a simple text generation application that is aimed at giving a user top three professions they would be good at based on a user prompt of one's skills and/or traits. It makes use of the huggingface 'text-generation' model for the same. 
 ## Link:[https://tellmemyprofession.azurewebsites.net/](https://tellmemyprofession.azurewebsites.net/)
 <img width="1713" alt="Screenshot 2023-12-07 at 6 17 27 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/9a5b4a51-056b-49ed-89c8-1f59ff878063">
 <img width="836" alt="Screenshot 2023-12-07 at 6 17 47 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/d9cba141-035f-419c-af05-f7720333f833">
+
+# HTML and CSS scripts: 
+The two html files: [traits.html](https://github.com/nogibjj/aad64_Individual_Project_4/blob/main/templates/traits.html) and [professions.html](https://github.com/nogibjj/aad64_Individual_Project_4/blob/main/templates/professions.html) are the scripts that dictate how the user interface will work for the flask app. These are extremely simple examples of HTML files, with only a text insert box, button, and text display. However, you could spruce it up with other attributes as well for future projects (e.g., drop down selections, container display, etc.). 
+
+The CSS file, [styles.css](https://github.com/nogibjj/aad64_Individual_Project_4/blob/main/static/css/styles.css) is used for styling the HTML files. It has information about the colours, fonts, sizes, and so on of all the attributes used in the HTML files. 
+
+# CI/CD Pipeline:
+This project also has a CI/CD pipeline, which is successfully running and consists of the following steps:
+1. Setting up a Python environment
+2. Installing project dependencies and packages
+3. Formatting using Black formatter
+4. Linting used Ruff
 
 
 # FAQs:
@@ -92,7 +106,7 @@ Ans: Yes! First off, make sure that you are working in codespaces. Then, through
 3. Log into Azure. 
 
 ### 9. How do I build a docker image? 
-Ans: or this, you're first going to want to layout your dockerfile (you can check mine out [here]()). You can find the dockerfile for this project in the main project directory. This will install use Python 3.10.8 as the base image, set the working directory to /app and copy the local directory contents into the container, install required Python packages from a requirements.txt file, expose port 5000 to allow external access, set an environment variable NAME to myenv, and execute a Flask application (flask_app.py) with specified host and port configurations when the container starts.
+Ans: or this, you're first going to want to layout your dockerfile (you can check mine out [here](https://github.com/nogibjj/aad64_Individual_Project_4/blob/main/Dockerfile)). You can find the dockerfile for this project in the main project directory. This will install use Python 3.10.8 as the base image, set the working directory to /app and copy the local directory contents into the container, install required Python packages from a requirements.txt file, expose port 5000 to allow external access, set an environment variable NAME to myenv, and execute a Flask application (flask_app.py) with specified host and port configurations when the container starts.
 
 You may face some issues here, e.g., getting issues regarding torch if you're using huggingface. For the same, I pivoted to using TensorFlow instead of torch and it worked well for my app. However, make sure this is applicable to yours as well before removing any dependencies. 
 
