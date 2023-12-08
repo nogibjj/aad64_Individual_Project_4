@@ -29,14 +29,7 @@ Ans:
 5. Go ahead and click `Create`. Your screen should would look something like this (**Tip**: Keep website handy because you're going to need the Docker command soon.):
 <img width="1280" alt="Screenshot 2023-12-07 at 11 33 45 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/450b23c9-9899-4eb5-8607-2a94a672cd5c">
 
-### 2. Are there any steps I need to complete before I build my docker image? 
-Ans: Yes! First off, make sure that you are working in codespaces. Then, through codespaces, you need to 
-1. Install Docker Hub. 
-2. Log into Dockerhub
-    For this, make sure you know your Dockerhub username, and you could create a password but I personally used a personal access token which I got by clicking my username in the top-right corner and from the drop-down menu select Account Settings. Select the Security tab and then New Access Token.
-3. Log into Azure. 
-
-### 3. How do I initially create a web app in Azure? 
+### 2. How do I initially create a web app in Azure? 
 Ans: 
 1. You start by opening up Microsoft Azure Portal. Go to `Create a New Resource` and click `Web` then `Web App`. <img width="1580" alt="Screenshot 2023-12-05 at 10 40 32 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/52ff84d3-962b-494d-8820-6d5fd2e2d113">
 2. Make sure you've been given enough credits to create a new web app (and if now, ask one of the TAs). 
@@ -52,30 +45,36 @@ For a much better, and much more detailed **how-to**, check [this](https://learn
 <img width="1204" alt="Screenshot 2023-12-06 at 2 44 08 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/d8317e28-c1d3-46cb-b0a2-ff2b4c3a07a0">
 
 
-### 4. Why are we using codespaces? 
+### 3. Why are we using codespaces? 
 Ans: Codespaces is a virtual environment that allows you to develop entirely in the cloud and thus, is a great tool for remote development. For the current project, you may face certain issues with library dependencies and/or hardware incompatibilities (especially for Mac M2 users) when you try to build a docker image and deploy your app. To avoid these issues, you can use codespaces to develop your app in the cloud.
 
-### 5. How do I build a flask app? 
+### 4. How do I build a flask app? 
 Ans: Though there are many approaches to doing this, I found this process to be very useful. 
 1. Lay out what exactly you want your web app to do. 
 2. After doing so, create your HTML and CSS files to have a basic skeleton of what your user will see (CSS is what you use to style your web page). You can open these HTML files as static files in your web browser. 
 3. Create the flask app to then connect your HTML and CSS files to your Python code. You can find the code for the same in `flask_app.py` in this project.
 4. Run the app locally to make sure everything is working as expected. You can do so by running `python flask_app.py` in your terminal.
 
-### 6. How do I use **huggingface** in my code?
+### 5. How do I use **huggingface** in my code?
 Ans: First, you need to install the `transformers` package to use hugging face. There are a variety of LLM models you can choose from in hugging face. Follow [this link]([Title](https://huggingface.co/docs/transformers/quicktour)) to learn more. For this project, I used the `text-generation` NLP model. 
 
 
-### 7. What are the libraries I need to install?
+### 6. What are the libraries I need to install?
 Ans: Most of the libraries are the usual ones we need for CI/CD (e.g., pytest, ruff, etc.). You can find the list of libraries in the `requirements.txt` file. You can install them by running `pip install -r requirements.txt` in your terminal. Some of the unique ones required specifically for this project were:
 * `Flask` - to create the web app
 * `transformers`- For your LLM model. 
 * `tensorflow` - This will be required as a dependency for transformers. If you do not have tensorflow (or pytorch), your docker image will not build. 
 
 
-### 8. How to run the app locally?
+### 7. How to run the app locally?
 Ans. To run the app locally, write up your entire flask app. This entails making your HTML (and possibly CSS) files as well. Then, you need to run the python file through your command line and if you have successfully built your flask app, you should be able to open your flask app in a web browser. 
 
+### 8. Are there any steps I need to complete before I build my docker image? 
+Ans: Yes! First off, make sure that you are working in codespaces. Then, through codespaces, you need to 
+1. Install Docker Hub. 
+2. Log into Dockerhub
+    For this, make sure you know your Dockerhub username, and you could create a password but I personally used a personal access token which I got by clicking my username in the top-right corner and from the drop-down menu select Account Settings. Select the Security tab and then New Access Token.
+3. Log into Azure. 
 
 ### 9. How do I build a docker image? 
 Ans: or this, you're first going to want to layout your dockerfile (you can check mine out [here]()). You can find the dockerfile for this project in the main project directory. This will install use Python 3.10.8 as the base image, set the working directory to /app and copy the local directory contents into the container, install required Python packages from a requirements.txt file, expose port 5000 to allow external access, set an environment variable NAME to myenv, and execute a Flask application (flask_app.py) with specified host and port configurations when the container starts.
