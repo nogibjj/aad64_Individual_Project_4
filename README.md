@@ -5,8 +5,32 @@ Auto Scaling Flask App Using Any Platform As a Service
 This project was created to learn the ins and outs of creating a Flask app and using Dockerhub and Azure App Services to deploy said app. For the same, we built a publicly accessible auto-scaling container using Azure App Services and Flask. This was an easy way to build and deploy a scaleable web-hosted app.
 
 # Structure of Project:
+```
+.
+├── .devcontainer/
+│   ├── Dockerfile
+│   └── devcontainer.json
+├── .github/
+│   └── workflows/
+│       └── actions.yml
+├── templates/
+│   ├── professions.html
+│   └── traits.html
+├── static/
+│   └── css/
+│       └── styles.css
+├── Dockerfile
+├── Makefile
+├── README.md
+├── flask_app.py
+└── requirements.txt
+```
 
-
+# The App:
+The flask app is a simple text generation application that is aimed at giving a user top three professions they would be good at based on a user prompt of one's skills and/or traits. It makes use of the huggingface 'text-generation' model for the same. 
+## Link:[https://tellmemyprofession.azurewebsites.net/](https://tellmemyprofession.azurewebsites.net/)
+<img width="1713" alt="Screenshot 2023-12-07 at 6 17 27 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/9a5b4a51-056b-49ed-89c8-1f59ff878063">
+<img width="836" alt="Screenshot 2023-12-07 at 6 17 47 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/d9cba141-035f-419c-af05-f7720333f833">
 
 
 # FAQs:
