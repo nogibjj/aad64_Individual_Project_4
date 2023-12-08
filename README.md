@@ -30,11 +30,12 @@ III. Then, you need to choose a name for your repository. For this project, I ch
 IV. Then, you need to choose whether you want the repository to be public or private. For this project, I chose `public` as I wanted to make it accessible to everyone.
 
 V. Go ahead and click `Create`. Your screen should would look something like this (**Tip**: Keep website handy because you're going to need the Docker command soon.):
+<img width="1280" alt="Screenshot 2023-12-07 at 11 33 45 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/450b23c9-9899-4eb5-8607-2a94a672cd5c">
 
 
 ### 2. How do I initially create a web app in Azure? 
 Ans: I. You start by opening up Microsoft Azure Portal. Go to `Create a New Resource` and click `Web` then `Web App`. 
-
+<img width="1580" alt="Screenshot 2023-12-05 at 10 40 32 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/52ff84d3-962b-494d-8820-6d5fd2e2d113">
 II. Make sure you've been given enough credits to create a new web app (and if now, ask one of the TAs). 
 
 III. Then, you need to choose or create a Resource Group. For this project, I created a new one. 
@@ -51,6 +52,8 @@ VIII. Click Docker, and choose the following options (make sure to change it acc
 
 IX. Click `Review + Create` and then `Create`.
 For a much better, and much more detailed **how-to**, check [this](https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/1-introduction) link out.
+
+<img width="1204" alt="Screenshot 2023-12-06 at 2 44 08 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/d8317e28-c1d3-46cb-b0a2-ff2b4c3a07a0">
 
 
 ### 3. Are there any steps I need to complete before I build my docker image? 
