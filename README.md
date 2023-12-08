@@ -32,18 +32,16 @@ Ans:
 
 ### 2. How do I initially create a web app in Azure? 
 Ans: 
-1. You start by opening up Microsoft Azure Portal. Go to `Create a New Resource` and click `Web` then `Web App`. 
-<img width="1580" alt="Screenshot 2023-12-05 at 10 40 32 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/52ff84d3-962b-494d-8820-6d5fd2e2d113">
+1. You start by opening up Microsoft Azure Portal. Go to `Create a New Resource` and click `Web` then `Web App`. <img width="1580" alt="Screenshot 2023-12-05 at 10 40 32 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/52ff84d3-962b-494d-8820-6d5fd2e2d113">
 2. Make sure you've been given enough credits to create a new web app (and if now, ask one of the TAs). 
 3. Then, you need to choose or create a Resource Group. For this project, I created a new one. 
 4. Choose a name for your project and make sure it's unique. For this project, I called the web app `TellMeMyProfession`.
 5. Choose how to publish your code. For this project, I chose `Docker Container` as I wanted to use Docker to deply my app as a Docker image.
 6. Choose the operating system. I chose `Linux` as I am working with a Mac.
-7. For region, pricing tier, and size, I chose the default options. 
-<img width="739" alt="Screenshot 2023-12-07 at 11 38 49 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/ecfc3521-c08d-48ca-a596-d1028432a67c">
-8. Click Docker, and choose the following options (make sure to change it according to your needs):
-<img width="733" alt="Screenshot 2023-12-07 at 11 39 00 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/7ef8a9ee-207c-4644-add1-e320ab592b4e">
+7. For region, pricing tier, and size, I chose the default options. <img width="739" alt="Screenshot 2023-12-07 at 11 38 49 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/ecfc3521-c08d-48ca-a596-d1028432a67c">
+8. Click Docker, and choose the following options (make sure to change it according to your needs):<img width="733" alt="Screenshot 2023-12-07 at 11 39 00 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/7ef8a9ee-207c-4644-add1-e320ab592b4e">
 9. Click `Review + Create` and then `Create`.
+
 For a much better, and much more detailed **how-to**, check [this](https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/1-introduction) link out.
 <img width="1204" alt="Screenshot 2023-12-06 at 2 44 08 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/d8317e28-c1d3-46cb-b0a2-ff2b4c3a07a0">
 
