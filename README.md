@@ -21,38 +21,30 @@ YourAppFolder/
 ## FAQs:
 
 ### 1. How do I create a Dockerhub repository?
-Ans: I. First, you need to create a Dockerhub account. You can do so [here](https://hub.docker.com/signup).
-
-II. Then, you need to create a repository. You can do so by clicking on `Create Repository`.
-
-III. Then, you need to choose a name for your repository. For this project, I chose `individual_project_4`. (*Note*: Try to add a description as well so that you know what the repo is for.)
-
-IV. Then, you need to choose whether you want the repository to be public or private. For this project, I chose `public` as I wanted to make it accessible to everyone.
-
-V. Go ahead and click `Create`. Your screen should would look something like this (**Tip**: Keep website handy because you're going to need the Docker command soon.):
+Ans: 
+1. First, you need to create a Dockerhub account. You can do so [here](https://hub.docker.com/signup).
+2. Then, you need to create a repository. You can do so by clicking on `Create Repository`.
+3. Then, you need to choose a name for your repository. For this project, I chose `individual_project_4`. (*Note*: Try to add a description as well so that you know what the repo is for.)
+4. Then, you need to choose whether you want the repository to be public or private. For this project, I chose `public` as I wanted to make it accessible to everyone.
+5. Go ahead and click `Create`. Your screen should would look something like this (**Tip**: Keep website handy because you're going to need the Docker command soon.):
 <img width="1280" alt="Screenshot 2023-12-07 at 11 33 45 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/450b23c9-9899-4eb5-8607-2a94a672cd5c">
 
 
 ### 2. How do I initially create a web app in Azure? 
-Ans: I. You start by opening up Microsoft Azure Portal. Go to `Create a New Resource` and click `Web` then `Web App`. 
+Ans: 
+1. You start by opening up Microsoft Azure Portal. Go to `Create a New Resource` and click `Web` then `Web App`. 
 <img width="1580" alt="Screenshot 2023-12-05 at 10 40 32 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/52ff84d3-962b-494d-8820-6d5fd2e2d113">
-II. Make sure you've been given enough credits to create a new web app (and if now, ask one of the TAs). 
-
-III. Then, you need to choose or create a Resource Group. For this project, I created a new one. 
-
-IV. Choose a name for your project and make sure it's unique. For this project, I called the web app `TellMeMyProfession`.
-
-V. Choose how to publish your code. For this project, I chose `Docker Container` as I wanted to use Docker to deply my app as a Docker image.
-
-VI. Choose the operating system. I chose `Linux` as I am working with a Mac.
-
-VII. For region, pricing tier, and size, I chose the default options. 
-
-VIII. Click Docker, and choose the following options (make sure to change it according to your needs):
-
-IX. Click `Review + Create` and then `Create`.
+2. Make sure you've been given enough credits to create a new web app (and if now, ask one of the TAs). 
+3. Then, you need to choose or create a Resource Group. For this project, I created a new one. 
+4. Choose a name for your project and make sure it's unique. For this project, I called the web app `TellMeMyProfession`.
+5. Choose how to publish your code. For this project, I chose `Docker Container` as I wanted to use Docker to deply my app as a Docker image.
+6. Choose the operating system. I chose `Linux` as I am working with a Mac.
+7. For region, pricing tier, and size, I chose the default options. 
+<img width="739" alt="Screenshot 2023-12-07 at 11 38 49 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/ecfc3521-c08d-48ca-a596-d1028432a67c">
+8. Click Docker, and choose the following options (make sure to change it according to your needs):
+<img width="733" alt="Screenshot 2023-12-07 at 11 39 00 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/7ef8a9ee-207c-4644-add1-e320ab592b4e">
+9. Click `Review + Create` and then `Create`.
 For a much better, and much more detailed **how-to**, check [this](https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/1-introduction) link out.
-
 <img width="1204" alt="Screenshot 2023-12-06 at 2 44 08 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/d8317e28-c1d3-46cb-b0a2-ff2b4c3a07a0">
 
 
@@ -122,9 +114,9 @@ Ans: For this, you may need to remove all the cached docker images that you have
 `docker system prune --all --force --volumes`
 
 ### 13. How do I configure my Azure web app with Dockerhub?
-Ans: I. Go to your Azure web app Overview page and look for `Deployment Center` in the menu bar on the left. Fill in the necessary details as shown in the image below and click **Save**. 
-
-II. Then, go to `Configuration` and add a New application setting. Make sure to type in the same port number as you've used for your entire flask app. 
+Ans: 
+1. Go to your Azure web app Overview page and look for `Deployment Center` in the menu bar on the left. Fill in the necessary details as shown in the image below and click **Save**. 
+2. Then, go to `Configuration` and add a New application setting. Make sure to type in the same port number as you've used for your entire flask app. 
 
 **Note:** Make sure to do this any time you build a new image and want to deploy your website. 
 
