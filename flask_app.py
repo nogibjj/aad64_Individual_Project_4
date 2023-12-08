@@ -7,9 +7,11 @@ app = Flask(__name__)
 text_generator = pipeline("text-generation")
 set_seed(42)  # Optional: Set a seed for reproducibility
 
+
 @app.route("/")
 def index():
     return render_template("traits.html")
+
 
 @app.route("/generate", methods=["POST"])
 def generate():
@@ -31,10 +33,14 @@ def generate():
 
         # Extract the generated texts excluding the original prompt
         generated_professions = [
-            generated_text["generated_text"].replace(prompt, "") for generated_text in generated_texts
+            generated_text["generated_text"].replace(prompt, "")
+            for generated_text in generated_texts
         ]
 
-        return render_template("professions.html", generated_professions=generated_professions)
+        return render_template(
+            "professions.html", generated_professions=generated_professions
+        )
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
