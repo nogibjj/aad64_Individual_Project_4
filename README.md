@@ -113,8 +113,8 @@ Ans: For this, you may need to remove all the cached docker images that you have
 
 ### 13. How do I configure my Azure web app with Dockerhub?
 Ans: 
-1. Go to your Azure web app Overview page and look for `Deployment Center` in the menu bar on the left. Fill in the necessary details as shown in the image below and click **Save**. 
-2. Then, go to `Configuration` and add a New application setting. Make sure to type in the same port number as you've used for your entire flask app. 
+1. Go to your Azure web app Overview page and look for `Deployment Center` in the menu bar on the left. Fill in the necessary details as shown in the image below and click **Save**.<img width="1521" alt="Screenshot 2023-12-07 at 4 05 49 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/a31cf5b7-20fa-4398-b567-bc6ca0d0c880">
+2. Then, go to `Configuration` and add a New application setting. Make sure to type in the same port number as you've used for your entire flask app. <img width="1717" alt="Screenshot 2023-12-07 at 4 06 29 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/d01043a0-bc39-4889-91d7-98b99e7259fd">
 
 **Note:** Make sure to do this any time you build a new image and want to deploy your website. 
 
