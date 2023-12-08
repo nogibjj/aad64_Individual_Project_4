@@ -6,6 +6,9 @@ Auto Scaling Flask App Using Any Platform As a Service
 # Summary:
 This project was created to learn the ins and outs of creating a Flask app and using Dockerhub and Azure App Services to deploy said app. For the same, we built a publicly accessible auto-scaling container using Azure App Services and Flask. This was an easy way to build and deploy a scaleable web-hosted app.
 
+# Youtube Link:
+Click [here](https://youtu.be/qSRCah4LS5s)
+
 # Structure of Project:
 ```
 .
