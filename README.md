@@ -29,8 +29,14 @@ Ans:
 5. Go ahead and click `Create`. Your screen should would look something like this (**Tip**: Keep website handy because you're going to need the Docker command soon.):
 <img width="1280" alt="Screenshot 2023-12-07 at 11 33 45 AM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/450b23c9-9899-4eb5-8607-2a94a672cd5c">
 
+### 2. Are there any steps I need to complete before I build my docker image? 
+Ans: Yes! First off, make sure that you are working in codespaces. Then, through codespaces, you need to 
+1. Install Docker Hub. 
+2. Log into Dockerhub
+    For this, make sure you know your Dockerhub username, and you could create a password but I personally used a personal access token which I got by clicking my username in the top-right corner and from the drop-down menu select Account Settings. Select the Security tab and then New Access Token.
+3. Log into Azure. 
 
-### 2. How do I initially create a web app in Azure? 
+### 3. How do I initially create a web app in Azure? 
 Ans: 
 1. You start by opening up Microsoft Azure Portal. Go to `Create a New Resource` and click `Web` then `Web App`. <img width="1580" alt="Screenshot 2023-12-05 at 10 40 32 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/52ff84d3-962b-494d-8820-6d5fd2e2d113">
 2. Make sure you've been given enough credits to create a new web app (and if now, ask one of the TAs). 
@@ -45,13 +51,6 @@ Ans:
 For a much better, and much more detailed **how-to**, check [this](https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/1-introduction) link out.
 <img width="1204" alt="Screenshot 2023-12-06 at 2 44 08 PM" src="https://github.com/nogibjj/aad64_Individual_Project_4/assets/143753050/d8317e28-c1d3-46cb-b0a2-ff2b4c3a07a0">
 
-
-### 3. Are there any steps I need to complete before I build my docker image? 
-Ans: Yes! First off, make sure that you are working in codespaces. Then, through codespaces, you need to 
-1. Install Docker Hub. 
-2. Log into Dockerhub
-    For this, make sure you know your Dockerhub username, and you could create a password but I personally used a personal access token which I got by clicking my username in the top-right corner and from the drop-down menu select Account Settings. Select the Security tab and then New Access Token.
-3. Log into Azure. 
 
 ### 4. Why are we using codespaces? 
 Ans: Codespaces is a virtual environment that allows you to develop entirely in the cloud and thus, is a great tool for remote development. For the current project, you may face certain issues with library dependencies and/or hardware incompatibilities (especially for Mac M2 users) when you try to build a docker image and deploy your app. To avoid these issues, you can use codespaces to develop your app in the cloud.
